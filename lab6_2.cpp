@@ -1,10 +1,3 @@
-/******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 
 #include <iostream>
 #include <cmath>
@@ -12,16 +5,16 @@ Write your code in this editor and press "Run" button to compile and execute it.
 using namespace std;
 
 double deg2rad(double x){
-    return M_PI*x/180.0;
+    return x * M_PI/180;
    
 }
-double rad2deg(double x){
-    return x/M_PI*180.0;
+double rad2deg(double y){
+    return y * 180/M_PI;
 }
-double findXComponent(double a1, double a2, double l1, double l2){
+double findXComponent(double l1, double l2, double a1, double a2){
     return cos(a1)*l1+cos(a2)*l2;
 }
-double findYComponent(double a1, double a2, double l1, double l2){
+double findYComponent(double l1, double l2, double a1, double a2){
     return sin(a1)*l1+sin(a2)*l2;
 }
 double pythagoras(double xcomp, double ycomp){
